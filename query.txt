@@ -1,0 +1,71 @@
+zone_code ILIKE '% %' OR
+zone_code ILIKE '%  %' OR
+zone_code ILIKE '%   %' OR
+zone_code ILIKE ' %' OR
+zone_code ILIKE '% ' OR
+zone_code ILIKE '%,%' OR
+zone_code ILIKE '%&%' OR
+zone_code ILIKE '%NA%' OR
+zone_code ILIKE '%NA' OR
+zone_code ILIKE 'NA%' OR
+zone_code ILIKE '%:%' OR
+zone_code ILIKE '%;%' OR
+zone_code ILIKE '%*%' OR
+zone_code ILIKE '%!%' OR
+zone_code ILIKE '%@%' OR
+zone_code ILIKE '%#%' OR
+zone_code ILIKE '%$%' OR
+zone_code ILIKE '%^%' OR
+zone_code ILIKE '%+%' OR
+zone_code ILIKE '%=%' OR
+zone_code ILIKE '%}%' OR
+zone_code ILIKE '%{%' OR
+zone_code ILIKE '%|%' OR
+zone_code ILIKE '%~%' OR
+zone_code ILIKE '%,%' OR
+zone_code ILIKE '%:%' OR
+zone_code ILIKE '%;%' OR
+zone_name ILIKE '%,%' OR
+zone_name ILIKE '%-%' OR
+zone_name ILIKE '%/%' OR 
+zone_name ILIKE '%&%' OR 
+zone_name ILIKE '%  %'  OR
+zone_name ILIKE '%   %'  OR
+zone_name ILIKE '%(%' OR
+zone_name ILIKE '%)%' OR
+zone_name ILIKE '%!%' OR
+zone_name ILIKE '%@%' OR
+zone_name ILIKE '%#%' OR
+zone_name ILIKE '%$%' OR
+zone_name ILIKE '%^%' OR
+zone_name ILIKE '%+%' OR
+zone_name ILIKE '%=%' OR
+zone_name ILIKE '%}%' OR
+zone_name ILIKE '%{%' OR
+zone_name ILIKE '%|%' OR
+zone_name ILIKE '%~%' OR
+zone_name <> title("zone_name") OR
+zone_code <> UPPER(zone_code) OR
+zone_name ILIKE '%(%' and zone_name not ilike '%)%' OR
+zone_name ILIKE '%)%' and zone_name not ilike '%(%' OR
+zone_name ILIKE '%\'%' OR
+zone_code ILIKE '%\'%' OR
+zone_code is NULL OR
+zone_name is NULL OR
+zone_code is '' OR
+zone_name is '' OR
+zone_name ILIKE '%:%' OR
+zone_code ILIKE '%:%' OR
+zone_name ILIKE '%]%' OR
+zone_code ILIKE '%[%' OR
+REGEXP_MATCH("zone_code", '[A-Za-z][.][A-Za-z]') OR 
+REGEXP_MATCH("zone_code", '[A-Za-z][.]') OR 
+REGEXP_MATCH("zone_code", '[.][A-Za-z]') OR 
+REGEXP_MATCH("zone_name", '[A-Za-z][.][A-Za-z]') OR 
+REGEXP_MATCH("zone_name", '[A-Za-z][.]') OR 
+REGEXP_MATCH("zone_name", '[.][A-Za-z]') OR
+regexp_match("zone_code", '[^A-Za-z0-9][^A-Za-z0-9]') OR
+regexp_match("zone_name", '[^A-Za-z0-9][^A-Za-z0-9]') OR
+regexp_match("zone_name", '^[^a-zA-Z0-9].*|.*[^a-zA-Z0-9]$') OR
+regexp_match("zone_code", '^[^a-zA-Z0-9].*|.*[^a-zA-Z0-9]$')
+
